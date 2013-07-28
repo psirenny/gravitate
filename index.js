@@ -1,5 +1,5 @@
 var _ = require('lodash')
-	, crypto = require('crypto')
+  , crypto = require('crypto')
   , qs = require('qs')
   , request = require('request')
   , sprintf = require('sprintf-js');
