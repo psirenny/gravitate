@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "lodash": "*",
+    "qs": "*",
+    "request": "*",
+    "sprintf-js": "*"
+  },
+  "name": "gravitate",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "node",
+    "gravatar"
+  ],
+  "author": "psirenny",
+  "license": "BSD"
+}
