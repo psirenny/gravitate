@@ -47,6 +47,7 @@ var imageUrl = gravitate.image.url(email, {
   default: 'monsterid',
   r: 'pg'
 });
+```
 
 Profiles
 --------
