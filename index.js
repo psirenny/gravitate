@@ -5,7 +5,8 @@ var _ = require('lodash')
   , sprintf = require('sprintf-js');
 
 exports.hash = function (email) {
-  return crypto.createHash('md5').update(email.replace(' ', '').toLowerCase()).digest('hex');
+  email = email.replace(' ', '').toLowerCase();
+  return crypto.createHash('md5').update(email).digest('hex');
 };
 
 exports.image = {
