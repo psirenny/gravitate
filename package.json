@@ -6,17 +6,26 @@
     "sprintf-js": "*"
   },
   "name": "gravitate",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Gravitate\r =========",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psirenny/gravitate.git"
+  },
   "keywords": [
     "node",
     "gravatar"
   ],
   "author": "psirenny",
-  "license": "BSD"
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "1e5e5ec4b1578f200e82a16d387f2428a11a3cc5",
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/psirenny/gravitate/issues"
+  }
 }

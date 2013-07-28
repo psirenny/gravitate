@@ -28,9 +28,8 @@ exports.profile = {
     };
 
     request.get(opts, function (err, res, body) {
-      if (err) return callback(err);
       if (res.statusCode !== 200) return callback(res.statusCode);
-      callback(body);
+      callback(err, body);
     });
   },
   url: function (hash, options) {
