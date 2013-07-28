@@ -59,7 +59,7 @@ var email = 'email@address.com';
 var profileUrl = gravitate.profile.url(email); // "https://secure.gravatar.com/63b91ca4ec19ad79f320eaf5815d75e9.json"
 ```
 
-Often times you'll want the actual data and not the profile url.
+Often times you'll want the actual data and not url.
 You can get the profile data with the following function:
 
 ```javascript
