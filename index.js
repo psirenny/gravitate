@@ -2,7 +2,7 @@ var _ = require('lodash')
   , crypto = require('crypto')
   , qs = require('qs')
   , request = require('request')
-  , sprintf = require('sprintf-js').sprintf;
+  , util = require('util');
 
 exports.hash = function (email) {
   if (!~email.indexOf('@')) return email;
@@ -15,7 +15,7 @@ exports.image = {
     if (!options) options = {};
     var domain = options.secure ? 'https://secure.gravatar.com' : 'http://www.gravatar.com';
     var params = qs.stringify(_.omit(options, 'secure'));
-    return sprintf('%s/avatar/%s?%s', domain, exports.hash(email), params);
+    return util.format('%s/avatar/%s?%s', domain, exports.hash(email), params);
   }
 };
 
@@ -37,6 +37,6 @@ exports.profile = {
   url: function (email, options) {
     if (!options) options = {};
     var domain = options.secure ? 'https://secure.gravatar.com' : 'http://www.gravatar.com';
-    return sprintf('%s/%s.json', domain, exports.hash(email));
+    return util.format('%s/%s.json', domain, exports.hash(email));
   }
 };

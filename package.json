@@ -2,8 +2,7 @@
   "dependencies": {
     "lodash": "*",
     "qs": "*",
-    "request": "*",
-    "sprintf-js": "*"
+    "request": "*"
   },
   "name": "gravitate",
   "version": "0.2.0",
