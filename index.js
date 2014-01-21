@@ -12,8 +12,9 @@ exports.hash = function (email) {
 
 exports.image = {
   url: function (email, options) {
+    if (!options) options = {};
     var domain = options.secure ? 'https://secure.gravatar.com' : 'http://www.gravatar.com';
-    var params = qs.stringify(_.reject(options, 'secure'));
+    var params = qs.stringify(_.omit(options, 'secure'));
     return sprintf('%s/avatar/%s?%s', domain, exports.hash(email), params);
   }
 };
@@ -34,6 +35,7 @@ exports.profile = {
     });
   },
   url: function (email, options) {
+    if (!options) options = {};
     var domain = options.secure ? 'https://secure.gravatar.com' : 'http://www.gravatar.com';
     return sprintf('%s/%s.json', domain, exports.hash(email));
   }
