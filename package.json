@@ -1,30 +1,29 @@
 {
+  "author": "psirenny",
+  "bugs": {
+    "url": "https://github.com/psirenny/gravitate/issues"
+  },
   "dependencies": {
     "lodash": "*",
     "qs": "*",
     "request": "*"
   },
-  "name": "gravitate",
-  "version": "0.2.0",
-  "description": "Gravitate\r =========",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/psirenny/gravitate.git"
-  },
+  "description": "Yet another node library for Gravatar with support for both the photo and profile APIs.",
+  "gitHead": "1e5e5ec4b1578f200e82a16d387f2428a11a3cc5",
   "keywords": [
     "node",
     "gravatar"
   ],
-  "author": "psirenny",
-  "license": "BSD",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "gravitate",
   "readmeFilename": "README.md",
-  "gitHead": "1e5e5ec4b1578f200e82a16d387f2428a11a3cc5",
-  "devDependencies": {},
-  "bugs": {
-    "url": "https://github.com/psirenny/gravitate/issues"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psirenny/gravitate.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.2.0"
 }
