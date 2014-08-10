@@ -1,24 +1,26 @@
 var crypto = require('crypto');
+var except = require('except');
 var qs = require('qs');
 var request = require('request');
-var util = require('util');
 
 exports.image = {};
 exports.profile = {};
 
 exports.hash = function (email) {
   if (!~email.indexOf('@')) return email;
-  email = email.replace(' ', '').toLowerCase();
+  email = email.replace(' ', '').toLowerCase().trim();
   return crypto.createHash('md5').update(email).digest('hex');
 };
 
 exports.image.url = function (email, options) {
   if (!options) options = {};
-  var domain = options.secure ? 'https://secure' : 'http://www';
-  domain += '.gravatar.com';
-  var params = qs.stringify(options);
   var hash = exports.hash(email);
-  return util.format('%s/avatar/%s?%s', domain, hash, params);
+  var domain = options.secure ? 'https://secure' : 'http://www';
+  var params = except(options, 'secure');
+  domain += '.gravatar.com';
+  params = qs.stringify(params);
+  params = params ? '?' + params : '';
+  return domain + '/avatar/' + hash + params;
 };
 
 exports.profile = {};
@@ -41,6 +43,8 @@ exports.profile.data = function (email, options, callback) {
 
 exports.profile.url = function (email, options) {
   if (!options) options = {};
-  var domain = options.secure ? 'https://secure.gravatar.com' : 'http://www.gravatar.com';
-  return util.format('%s/%s.json', domain, exports.hash(email));
+  var hash = exports.hash(email);
+  var domain = options.secure ? 'https://secure' : 'http://www';
+  domain += '.gravatar.com';
+  return domain + '/' + hash + '.json';
 };

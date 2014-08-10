@@ -4,10 +4,15 @@
     "url": "https://github.com/psirenny/gravitate/issues"
   },
   "dependencies": {
+    "except": "^0.1.1",
     "qs": "*",
     "request": "*"
   },
   "description": "Yet another node library for Gravatar with support for both the photo and profile APIs.",
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "chai": "^1.9.1"
+  },
   "gitHead": "1e5e5ec4b1578f200e82a16d387f2428a11a3cc5",
   "keywords": [
     "node",
@@ -22,7 +27,7 @@
     "url": "https://github.com/psirenny/gravitate.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha test"
   },
   "version": "0.2.1"
 }
