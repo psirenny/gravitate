@@ -4,7 +4,6 @@
     "url": "https://github.com/psirenny/gravitate/issues"
   },
   "dependencies": {
-    "lodash": "*",
     "qs": "*",
     "request": "*"
   },
