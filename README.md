@@ -3,6 +3,8 @@ Gravitate
 
 Yet another node library for [Gravatar](http://en.gravatar.com) with support for both the **photo** and **profile** APIs.
 
+[![Build Status](https://travis-ci.org/psirenny/gravitate.png?branch=master)](https://travis-ci.org/psirenny/gravitate)
+
 Hash
 ----
 
@@ -11,7 +13,6 @@ If the input has already been hashed then it will just return the value.
 
 ```javascript
 var gravitate = require('gravitate');
-
 var email = 'email@address.com';
 var hash = gravitate.hash(email); // "63b91ca4ec19ad79f320eaf5815d75e9"
 ```
