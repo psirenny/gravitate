@@ -12,6 +12,12 @@ describe('gravitate', function () {
       gravitate.hash.should.be.a('function');
     });
 
+    it('should return an empty string', function () {
+      var hash = gravitate.hash('');
+      hash.should.be.a('string');
+      hash.should.be.empty;
+    });
+
     it('should hash an email', function () {
       var hash = gravitate.hash(fixture.email);
       hash.should.be.a('string');
