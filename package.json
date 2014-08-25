@@ -1,5 +1,5 @@
 {
-  "author": "psirenny",
+  "author": "Dennis Torres <djtorres0@gmail.com>",
   "bugs": {
     "url": "https://github.com/psirenny/gravitate/issues"
   },
@@ -10,8 +10,8 @@
   },
   "description": "Yet another node library for Gravatar with support for both the photo and profile APIs.",
   "devDependencies": {
-    "mocha": "^1.21.4",
-    "chai": "^1.9.1"
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4"
   },
   "gitHead": "1e5e5ec4b1578f200e82a16d387f2428a11a3cc5",
   "keywords": [
