@@ -1,6 +1,8 @@
 {
   "email": "myemailaddress@example.com",
+  "emailPlus": "myemailaddress+5@example.com",
   "hash": "0bc83cb571cd1c50ba6f3e8a78ef1346",
+  "hashPlus": "03e564a06f417f8d4b85d484d65e9c6f",
   "imageUrl": "http://www.gravatar.com/avatar/0bc83cb571cd1c50ba6f3e8a78ef1346",
   "parameters": {
     "d": 404,

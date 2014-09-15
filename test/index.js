@@ -41,6 +41,18 @@ describe('gravitate', function () {
       hash.should.be.a('string');
       hash.should.eql(fixture.hash);
     });
+
+    it('should ignore characters after "+" sign', function () {
+      var hash = gravitate.hash(fixture.emailPlus);
+      hash.should.be.a('string');
+      hash.should.eql(fixture.hash);
+    });
+
+    it('should not ignore characters after "+" sign', function () {
+      var hash = gravitate.hash(fixture.emailPlus, {ignorePlus: false});
+      hash.should.be.a('string');
+      hash.should.eql(fixture.hashPlus);
+    });
   });
 
   describe('image', function () {

@@ -17,6 +17,8 @@ var email = 'email@address.com';
 var hash = gravitate.hash(email); // "63b91ca4ec19ad79f320eaf5815d75e9"
 ```
 
+**ignorePlus** - Ignore characters after and including a *+* sign. Defaults to `true`.
+
 Images
 ------
 
