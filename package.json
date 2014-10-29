@@ -6,8 +6,8 @@
   "dependencies": {
     "email-addresses": "^1.1.2",
     "lodash": "^2.4.1",
-    "qs": "*",
-    "request": "*"
+    "qs": "^2.3.2",
+    "superagent": "^0.20.0"
   },
   "description": "Yet another node library for Gravatar with support for both the photo and profile APIs.",
   "devDependencies": {
@@ -30,5 +30,5 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha test"
   },
-  "version": "0.4.1"
+  "version": "0.4.2"
 }
