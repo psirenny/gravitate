@@ -65,6 +65,12 @@ describe('gravitate', function () {
         gravitate.image.url.should.be.a('function');
       });
 
+      it('should return an empty string', function () {
+        var url = gravitate.image.url();
+        url.should.be.a('string');
+        url.should.be.empty;
+      });
+
       it('should return a url', function () {
         var url = gravitate.image.url(fixture.email);
         url.should.eql(fixture.imageUrl);
@@ -129,6 +135,12 @@ describe('gravitate', function () {
     describe('url', function () {
       it('should be a function', function () {
         gravitate.profile.url.should.be.a('function');
+      });
+
+      it('should return an empty string', function () {
+        var url = gravitate.profile.url();
+        url.should.be.a('string');
+        url.should.be.empty;
       });
 
       it('should return a url', function () {
