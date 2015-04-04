@@ -71,14 +71,14 @@ describe('gravitate', function () {
         url.should.be.empty;
       });
 
-      it('should return a url', function () {
+      it('should return a secure url', function () {
         var url = gravitate.image.url(fixture.email);
-        url.should.eql(fixture.imageUrl);
+        url.should.eql(fixture.secureImageUrl);
       });
 
-      it('should be secure', function () {
-        var url = gravitate.image.url(fixture.email, {secure: true});
-        url.should.eql(fixture.secureImageUrl);
+      it('should return an insecure url', function () {
+        var url = gravitate.image.url(fixture.email, {secure: false});
+        url.should.eql(fixture.imageUrl);
       });
 
       it ('should allow parameters', function () {
@@ -143,14 +143,14 @@ describe('gravitate', function () {
         url.should.be.empty;
       });
 
-      it('should return a url', function () {
+      it('should return a secure url', function () {
         var url = gravitate.profile.url(fixture.email);
-        url.should.eql(fixture.profileUrl);
+        url.should.eql(fixture.secureProfileUrl);
       });
 
-      it('should be secure', function () {
-        var url = gravitate.profile.url(fixture.email, {secure: true});
-        url.should.eql(fixture.secureProfileUrl);
+      it('should return an insecure url', function () {
+        var url = gravitate.profile.url(fixture.email, {secure: false});
+        url.should.eql(fixture.profileUrl);
       });
     });
   });
